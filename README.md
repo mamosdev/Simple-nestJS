@@ -20,7 +20,7 @@ Aplikasi NestJS sederhana untuk menerima data melalui HTTP POST dan meneruskanny
 1. Clone repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/mamosdev/nestjs-mqtt-app
 cd nestjs-mqtt-app
 ```
 
