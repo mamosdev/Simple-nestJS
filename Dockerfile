@@ -1,18 +1,15 @@
-# Gunakan image Node.js
-FROM node:18
+FROM node:18-alpine
 
-# Set working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json dan install dependencies
 COPY package*.json ./
+
 RUN npm install
 
-# Copy semua file ke dalam container
 COPY . .
 
-# Expose port 3000
+RUN npm run build
+
 EXPOSE 3000
 
-# Jalankan aplikasi
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:prod"]
